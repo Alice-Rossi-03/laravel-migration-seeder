@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [PageController::class,'index'])->name('homePage');
+Route::get('/filter', [PageController::class,'filter'])->name('filteredPage');
 
 

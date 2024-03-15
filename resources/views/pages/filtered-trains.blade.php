@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Trains | Home')
+@section('title', 'Trains | Filtered-Trains')
 
 @section('content')
 <main>
+    <h2 style="text-align: center; margin-block: 1em; color: rgb(49, 108, 217)">Filtered Trains:</h2>
+
     <div class="container">
-        @foreach ( $trains as $item )
+        @foreach ( $filteredTrains as $item )
 
         <div class="card">
             <h2>{{$item['arrival_station']}}</h2>
@@ -33,6 +35,7 @@
         </div>
 
         @endforeach
+
     </div>
 </main>
 

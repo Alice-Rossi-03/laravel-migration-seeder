@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Guest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Train;
+use Carbon\Carbon;
 
 class PageController extends Controller
 {
@@ -11,4 +12,12 @@ class PageController extends Controller
         $trains = Train::All();
         return view('pages.home', compact('trains'));
     }
+
+    public function filter(Request $request){
+
+        $filteredTrains = Train::where('departure_time', '>', Carbon::now())->get();
+
+        return view('pages.filtered-trains', compact('filteredTrains'));
+    }
+
 }
