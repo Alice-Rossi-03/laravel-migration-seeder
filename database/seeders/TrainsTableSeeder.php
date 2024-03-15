@@ -9,7 +9,6 @@ use App\Models\Train;
 
 class TrainsTableSeeder extends Seeder
 {
-    
     public function run(Faker $faker): void
     {
         for ($i = 0; $i < 10; $i++) {

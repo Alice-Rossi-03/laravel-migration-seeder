@@ -10,5 +10,7 @@
 <body>
     @include('partials.header')
     @yield('content')
+
+    {{-- {{dd($trains)}} --}}
 </body>
 </html>
