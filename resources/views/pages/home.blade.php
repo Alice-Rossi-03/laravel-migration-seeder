@@ -8,31 +8,31 @@
         @foreach ( $trains as $item )
 
         <div class="card">
-            <h2>{{$item['arrival_station']}}</h2>
-            <h4>Company: {{$item['company']}}</h4>
+            <h2>{{$item->arrival_station}}</h2>
+            <h4>Company: {{$item->company}}</h4>
             <div>
                 <b>Departure Station:</b>
-                {{$item['departure_station']}}
+                {{$item->departure_station}}
             </div>
             <div>
                 <b>Departure Date:</b>
-                {{$item['departure_date']}}
+                {{$item->departure_date}}
             </div>
             <div>
                 <b>Departure Time:</b>
-                {{$item['departure_time']}}
+                {{$item->departure_time}}
             </div>
             <div>
                 <b>Arrival Time:</b>
-                {{$item['arrival_time']}}
+                {{$item->arrival_time}}
             </div>
             <div>
                 <b>On Time?</b>
-                {{ $item['on_time'] == 1 ? 'Yes' : 'No' }}
+                {{ $item->on_time == 1 ? 'Yes' : 'No' }}
             </div>
             <div>
                 <b>Cancelled?</b>
-                {{$item['cancelled'] == 1 ? 'Yes' : 'No'}}
+                {{$item->cancelled == 1 ? 'Yes' : 'No'}}
             </div>
         </div>
 
