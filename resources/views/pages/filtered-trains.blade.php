@@ -17,6 +17,10 @@
                 {{$item['departure_station']}}
             </div>
             <div>
+                <b>Departure Date:</b>
+                {{$item['departure_date']}}
+            </div>
+            <div>
                 <b>Departure Time:</b>
                 {{$item['departure_time']}}
             </div>

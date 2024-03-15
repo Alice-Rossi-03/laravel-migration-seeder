@@ -6,7 +6,7 @@
                 <a href="{{Route('homePage')}}">Home</a>
             </li>
             <li>
-                <a href="{{Route('filteredPage')}}">Filtered By Departure Time</a>
+                <a href="{{Route('filteredPage')}}">Filter By Departure Date</a>
             </li>
         </ul>
     </nav>

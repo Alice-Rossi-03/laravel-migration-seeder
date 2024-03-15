@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-
     public function up(): void
     {
         Schema::create('trains', function (Blueprint $table) {
@@ -20,6 +19,7 @@ return new class extends Migration
             $table->integer('coach_count');
             $table->boolean('on_time')->default(true);
             $table->boolean('cancelled')->default(false);
+            $table->date('departure_date');
             $table->timestamps();
         });
     }
@@ -29,4 +29,3 @@ return new class extends Migration
         Schema::dropIfExists('trains');
     }
 };
-
