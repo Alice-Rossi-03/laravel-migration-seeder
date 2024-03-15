@@ -15,7 +15,7 @@ class PageController extends Controller
 
     public function filter(Request $request){
 
-        $filteredTrains = Train::where('departure_date', Carbon::today())->get();
+        $filteredTrains = Train::where('departure_date', '>=' ,Carbon::today())->get();
 
         return view('pages.filtered-trains', compact('filteredTrains'));
     }
